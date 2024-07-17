@@ -1,21 +1,21 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * *_memset - fills memory with a constant byte
- * @s: memory area to be filled
- * @b: char to copy
- * @n: number of times to copy b
- *
- * Return: pointer to the memory area s
+ * _memcpy - a function that copys memory area
+ * @dest: memory area destination to copy
+ * @src: memory area source to copy from
+ * @n: number of bytes
+ * Return: returns pointer to copy location
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	char *start = dest;
 
-	for (i = 0; i < n; i++)
+	while (n--)
 	{
-		s[i] = b;
+		*dest = *src;
+		src++;
+		dest++;
 	}
-
-	return (s);
+	return (start);
 }
